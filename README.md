@@ -5,6 +5,6 @@ it's an exam project, a full stack project for my personal portfolio.... yeah, I
 
 ## tech stack:
 
-I've planned to use react, django, postgreSQL, and some python machine learning pips that, currently I'm not able to implement, as I'm using an M1 macbook pro to develope all this.... and I have no other money left to buy parallel desktop to run windows 10 and develope the ML from there.... :(
+I've planned to use react, django, postgreSQL, and some python machine learning pips that, currently I'm not able to implement, as I'm using an M1 macbook pro to develope all this.... and I have no other money left to buy parallel desktop to run windows 10 and develope all the rest of the ML from there.... :(
 
 ### Please be aware that this is an own exam project, I can't use any tutorial to reach certain points, yeah... I can research docs, find boilerplates and solutions from stackoverflow, but can't follow any easy tutorial to get the job done in a breeze...
