@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="279px" height="48px" viewBox="0 0 279 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Group</title>
+    <defs>
+        <filter id="filter-1">
+            <feColorMatrix in="SourceGraphic" type="matrix" values="0 0 0 0 1.000000 0 0 0 0 0.998075 0 0 0 0 0.998075 0 0 0 1.000000 0"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(-360.000000, -26.000000)" filter="url(#filter-1)">
+            <g transform="translate(360.000000, 26.000000)">
+                <text id="Mediem" font-family="STHeitiTC-Medium, Heiti TC" font-size="48" font-weight="bold" fill="#000000">
+                    <tspan x="71.992" y="41">Mediem</tspan>
+                </text>
+                <circle id="Oval" fill="#000000" cx="49.734177" cy="23" r="20"></circle>
+                <ellipse id="Oval" fill="#000000" cx="19.7594937" cy="23" rx="10" ry="20"></ellipse>
+                <ellipse id="Oval" fill="#000000" cx="5" cy="23" rx="5" ry="20"></ellipse>
+            </g>
+        </g>
+    </g>
+</svg>

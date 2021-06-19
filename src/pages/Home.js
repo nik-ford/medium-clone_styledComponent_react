@@ -1,10 +1,14 @@
 import React from 'react';
 import styled from 'styled-components';
+import useWindowDimensions from '../hooks/useWindowDimension'
 
 function App() {
+	const { height, width } = useWindowDimensions();
+    // DELETE THIS TAGS WHEN READY TO CREATE REAL BLOCKS
 
-// DELETE THIS TAGS WHEN READY TO CREATE REAL BLOCKS
-
+	const Dimensions = styled.h1`
+	text-align: center;
+	`;
   const Main = styled.main`
   display: flex;
   align-items: center;
@@ -36,6 +40,7 @@ function App() {
 
   return (
     <Main>
+			<Dimensions>height: {height} width: {width}</Dimensions>
       <Header>A</Header>
       <Content1>B</Content1>
       <Content2>C</Content2>
