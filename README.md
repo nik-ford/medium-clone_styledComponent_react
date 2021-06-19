@@ -1,7 +1,7 @@
 #This project is a clone of medium app using django/rest/react/styledComeponents stack
 
 unfortunately, I have no time to update this readme, but I'll promise I will create DOCS when project get at least 60% completed...
-it's an exam project, a full stack project for my personal portfolio.... yeah, I have a plan on how to use this......
+it's an exam project, a full stack project for my personal portfolio.... yeah, I have a plan on how to use this...... later on!
 
 ## tech stack:
 
