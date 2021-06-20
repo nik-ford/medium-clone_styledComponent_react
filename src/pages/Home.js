@@ -1,53 +1,50 @@
 import React from 'react';
 import styled from 'styled-components';
 import useWindowDimensions from '../hooks/useWindowDimension'
+import Navbar from '../components/Navbar'
 
-function App() {
+// TODO move styled component variables in a personal context
+// I will leverage styled components to dinamically render mobile/desktop styled component
+// I can use ternary expressions or props, I'll decide later, 
+// now it's too late.......it's time to build a GIN TONIC, chill, and then go bed :)
+
+export const Grid = styled.div`
+border: 1px solid purple;
+`;
+export const Row = styled.div`
+border: 1px solid violet;
+display: flex;
+`;
+export const Col = styled.div`
+border: 1px solid violet;
+flex: ${(props) => props.size}; // TODO create other props (THEME??)
+padding: 5px;
+`;
+export const Dimensions = styled.h1`
+text-align: center;
+`;
+
+const Home = () => {
 	const { height, width } = useWindowDimensions();
-    // DELETE THIS TAGS WHEN READY TO CREATE REAL BLOCKS
 
-	const Dimensions = styled.h1`
-	text-align: center;
-	`;
-  const Main = styled.main`
-  display: flex;
-  align-items: center;
-  width: 100%;
-  height: auto;
-  flex-direction: column;
-  `;
-  const Header = styled.header`
-  width: 100%;
-  background-color: pink;
-  `;
-  const Content1 = styled.div`
-  width: 100%;
-  background-color: purple;
-  `;
-  const Content2 = styled.div`
-  width: 100%;
-  background-color: blue;
-  `;
-  const Content3 = styled.div`
-  width: 100%;
-  background-color: green;
-  `;
-  const Footer = styled.footer`
-  width: 100%;
-  background-color: yellow;
-  `;
-  
 
   return (
-    <Main>
-			<Dimensions>height: {height} width: {width}</Dimensions>
-      <Header>A</Header>
-      <Content1>B</Content1>
-      <Content2>C</Content2>
-      <Content3>D</Content3>
-      <Footer>F</Footer>
-    </Main>
+		<Grid>
+			<Row>
+				<Col size={1}>
+					full size column copyPasteMe!
+				</Col>
+			</Row>
+			<Row>
+				<Col size={2}>
+					article section size
+				</Col>
+				<Col size={1}>
+					footer
+				</Col>
+			</Row>
+    </Grid>
   );
 }
 
-export default App;
+export default Home;
