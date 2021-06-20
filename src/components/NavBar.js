@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import logo from '../assets/images/logopngblack.png'
 
+// TODO update this to use styled grid context
+
 const Navbar = () => {
 
 
