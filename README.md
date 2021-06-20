@@ -1,4 +1,4 @@
-#This project is a clone of medium website using django/rest/react/styledComeponents stack
+## This project is a clone of medium website using django/rest/react/styledComeponents stack
 
 unfortunately, I have no time to update this readme, but I'll promise I will create a full readme DOC when project will be, at least 60% completed...
 it's created as a training full stack project for my personal portfolio.... yeah, I have a plan on how to mod and use this later on! ....but for now it's just a demo
