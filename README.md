@@ -7,7 +7,7 @@ it's created as a training full stack project for my personal portfolio.... yeah
 ## tech stack:
 
 
-I've planned to use react, django, postgreSQL, and some python machine learning deps that, currently I'm not able to implement, as I'm using a M1 macbook pro to develope all this.... (PANDAS AND OTHER ML DEPS DOES NOT WORK YET HERE.....  and, as I currently have no job, I can't buy parallel desktop or a windows machine to run windows 10 and develope all the rest of the ML from there.... :(
+I've planned to use react, django, postgreSQL, and some python machine learning deps that, currently I'm not able to implement, as I'm using a M1 macbook pro to develope all this.... (PANDAS AND OTHER ML DEPS DOES NOT WORK YET HERE.....  and, as I currently have no job, I can't buy parallel desktop or a windows machine to run windows 10 to work with ML .... :(
 
 
 ### Please be aware that this is an open source training project, any comment and feedback will be highly appreciated
