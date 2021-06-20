@@ -1,13 +1,16 @@
-#This project is a clone of medium app using django/rest/react/styledComeponents stack
+#This project is a clone of medium website using django/rest/react/styledComeponents stack
 
-unfortunately, I have no time to update this readme, but I'll promise I will create DOCS when project get at least 60% completed...
-it's an exam project, a full stack project for my personal portfolio.... yeah, I have a plan on how to use this...... later on!
+unfortunately, I have no time to update this readme, but I'll promise I will create a full readme DOC when project will be, at least 60% completed...
+it's created as a training full stack project for my personal portfolio.... yeah, I have a plan on how to mod and use this later on! ....but for now it's just a demo
+
 
 ## tech stack:
 
-I've planned to use react, django, postgreSQL, and some python machine learning pips that, currently I'm not able to implement, as I'm using an M1 macbook pro to develope all this.... (PANDAS AND SHY_LEARN DOES NOT WORK YET HERE.....  and, I have no other money left to buy parallel desktop to run windows 10 and develope all the rest of the ML from there.... :(
 
-### Please be aware that this is an own exam project, I can't use any tutorial to reach certain point. yeah... I can research docs, find boilerplates and solutions from stackoverflow, but can't follow any easy tutorial to get the job done in a breeze...
+I've planned to use react, django, postgreSQL, and some python machine learning deps that, currently I'm not able to implement, as I'm using a M1 macbook pro to develope all this.... (PANDAS AND OTHER ML DEPS DOES NOT WORK YET HERE.....  and, as I currently have no job, I can't buy parallel desktop or a windows machine to run windows 10 and develope all the rest of the ML from there.... :(
 
 
-## SO...... ETA IS UNKNOWN
+### Please be aware that this is an open source training project, any comment and feedback will be highly appreciated
+
+
+Nick
