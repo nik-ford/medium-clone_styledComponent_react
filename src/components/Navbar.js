@@ -1,56 +1,47 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import styled from 'styled-components'
-import logo from '../assets/images/logopngblack.png'
+import {AppContext} from '../context/AppProvider'
+import logopngblack from '../assets/images/logopngblack.png'
+import { Link } from 'react-router-dom';
 
-// TODO update this to use styled grid context
+export const Image = styled.img`
+  margin-left: 60px;
+  width: 190px;
+  max-width:100%;
+  display:block;
+  height:auto;
+  align-self: center;
+`;
+export const List = styled.div`
+display: flex;
+`;
+export const Item = styled.p`
+width: 50px;
+height: 30px;`;
 
 const Navbar = () => {
-
-
-    const Wrapper = styled.div`
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    width: 100%;
-    height: 70px;
-    `;
-    const Navbar = styled.div`
-    width: 100%;
-    height: 70px;
-    justify-items: space-between;
-    align-items: center;
-    `;
-
-    const Links = styled.ul`
-    width: auto;
-    text-decoration: none;
-
-    `;
-    const Link = styled.li`
-    width: auto;
-    text-decoration: none;
-    font-size: 12px;
+    const { Col, Row } = useContext(AppContext)
     
-        `;
-    const Image = styled.img`
-    align-self: center;
-    max-width:100%;
-    height:auto;
-    `;
 
 
     return (
-        <Wrapper>
-            <Navbar>
-                <Image src={logo} />
-                <Links>
-                    <Link>link</Link>
-                    <Link>link</Link>
-                    <Link>link</Link>
-                </Links>
-            </Navbar>
-        </Wrapper>
-            
+    <>  <Row>
+        <Col
+        width={`50%`}
+        height={`75px`}
+        backgroundColor={`blue`}
+        display={`flex`}>
+            <Image src={logopngblack} />
+        </Col>
+        <Col
+        width={`50%`}
+        height={`75px`}
+        display={`flex`}
+        backgroundColor={`black`}>
+            <Link><Item>link</Item></Link>
+        </Col>
+        </Row>
+    </>
     )
 }
 

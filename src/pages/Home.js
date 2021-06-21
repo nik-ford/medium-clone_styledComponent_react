@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import styled from 'styled-components';
 // import useWindowDimensions from '../hooks/useWindowDimension'
-// import Navbar from '../components/Navbar'
+import Navbar from '../components/Navbar'
 import {AppContext} from '../context/AppProvider'
 
 // TODO move styled component variables in a personal context
@@ -15,32 +15,43 @@ text-align: center;
 `;
 
 const Home = () => {
-	const {Grid, Row, Col } = useContext(AppContext)
+	const {Grid, Row, Col, Div } = useContext(AppContext)
 
   return (
 		<Grid>
 			<Row>
-				<Col size={1}>
-					Navbar
+				<Col
+				 size={1}
+				 height={`75px`}
+				 backgroundColor={`#C4E2FF`}>
+					 <Navbar />
 				</Col>
 			</Row>
 			<Row>
-				<Col size={1}>
+				<Col
+				size={1}
+				height={`400px`}
+				backgroundColor={`#C4E2FF`}>
 					hero header
 				</Col>
 			</Row>
 			<Row>
-				<Col size={1}>
+				<Col
+				size={1}
+				height={`350px`}>
 					subsection
 				</Col>
 			</Row>
 			<Row>
-				<Col size={2}>
+				<Col
+				size={2}
+				height={`350px`}>
 					article section
 				</Col>
 				<Col
 				 size={1}
-				 collapse={'xs'}>
+				 collapse={'xs'}
+				 height={`350px`}>
 					footer
 				</Col>
 			</Row>
