@@ -8,7 +8,7 @@ you may have noticed the usage of styled components, I hope at the end of all th
 ## tech stack:
 
 
-I've planned to use react, django, postgreSQL, and some python machine learning deps that, currently, I'm not able to implement as I'm using a M1 macbook pro to develope all this.... ( PYTHON ML DEPS DOES NOT WORK QUITE WELL HERE.....  and, as I currently have no job, I can't buy a windows 10 laptop..... (or mod this one!!) :(
+I've planned to use react, django, postgreSQL, and some python machine learning deps that, currently, I'm not able to implement as I, unfortunately, am using a M1 macbook pro to develope all this.... ( PYTHON ML DEPS DOES NOT WORK QUITE WELL HERE.....  and, as I, currently have no job, and so I can't buy a windows 10 laptop..... (and I also can't mod this one!!) :(
 
 
 ### Please be aware that this is an open source training project
