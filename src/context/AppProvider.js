@@ -29,7 +29,7 @@ margin: 0px;
 `;
 const media = {
 	xs: (styles) => `
-	@media only screen and (max-width: 380px) {
+	@media only screen and (max-width: 480px) {
 		${styles}
 	}
 	`,

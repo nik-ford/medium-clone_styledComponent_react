@@ -15,7 +15,7 @@ text-align: center;
 `;
 
 const Home = () => {
-	const {Grid, Row, Col, Div } = useContext(AppContext)
+	const {Grid, Row, Col } = useContext(AppContext)
 
   return (
 		<Grid>
