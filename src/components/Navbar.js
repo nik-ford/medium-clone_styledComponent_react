@@ -11,13 +11,21 @@ export const Image = styled.img`
   display:block;
   height:auto;
   align-self: center;
+  justify-self: flex-start;
 `;
-export const List = styled.div`
+export const Items = styled.div`
 display: flex;
+width: 100%;
+height: 75px;
+justify-content: flex-end;
+align-items: center;
+margin-right: 60px;
 `;
-export const Item = styled.p`
-width: 50px;
-height: 30px;`;
+export const Text = styled.h3`
+text-align: center;
+padding: 10px;
+
+`;
 
 const Navbar = () => {
     const { Col, Row } = useContext(AppContext)
@@ -29,16 +37,21 @@ const Navbar = () => {
         <Col
         width={`50%`}
         height={`75px`}
-        backgroundColor={`blue`}
-        display={`flex`}>
+        display={`flex`}
+        >
             <Image src={logopngblack} />
         </Col>
         <Col
         width={`50%`}
         height={`75px`}
         display={`flex`}
-        backgroundColor={`black`}>
-            <Link><Item>link</Item></Link>
+        >
+            <Items>
+                <Link style={{ textDecoration: 'none', color: '#1B1B1C' }}><Text>Link</Text></Link>
+                <Link style={{ textDecoration: 'none', color: '#1B1B1C' }}><Text>Link</Text></Link>
+                <Link style={{ textDecoration: 'none', color: '#1B1B1C' }}><Text>Link</Text></Link>
+                <Link style={{ textDecoration: 'none', color: '#1B1B1C' }}><Text>Link</Text></Link>
+            </Items>
         </Col>
         </Row>
     </>

@@ -1,5 +1,5 @@
-import React, { createContext } from 'react'
-import styled from 'styled-components'
+import React, { createContext } from 'react';
+import styled from 'styled-components';
 
 export const AppContext = createContext({})
 
@@ -13,6 +13,7 @@ padding: ${(props) => props.padding};
 flex: ${(props) => props.size};
 width: ${(props) => props.width};
 height: ${(props) => props.height};
+
 `;
 
 const Grid = styled.div`
