@@ -1,12 +1,12 @@
 import React, {useContext} from 'react'
 import styled from 'styled-components'
 import {AppContext} from '../context/AppProvider'
-import logopngblack from '../assets/images/logopngblack.png'
+import logopngblacknew from '../assets/images/logopngblacknew.png'
 import { Link } from 'react-router-dom';
 
 export const Image = styled.img`
-  margin-left: 60px;
-  width: 190px;
+  margin-left: 4.6em;
+  width: 160px;
   max-width:100%;
   display:block;
   height:auto;
@@ -21,14 +21,35 @@ justify-content: flex-end;
 align-items: center;
 margin-right: 60px;
 `;
-export const Text = styled.h3`
+export const Text = styled.p`
+margin-right: 15px;
 text-align: center;
-padding: 10px;
+color: #191919;
+padding: 5px;
+font-family: PlayfairDisplay;
+font-size: 1em;
 
+`;
+const Button = styled.button`
+  color: gainsboro;
+  width: 8em;
+  height: 2.8em;
+  font-size: 0.85em;
+  padding: 0.25em 1em;
+  background-color: black;
+  border-radius: 50px;
+  border: 1px solid black;
+`;
+const StyledLink = styled(Link)`
+    text-decoration: none;
+
+    &:focus, &:hover, &:visited, &:link, &:active {
+        text-decoration: none;
+    }
 `;
 
 const Navbar = () => {
-    const { Col, Row } = useContext(AppContext)
+    const { Col, Row, Div } = useContext(AppContext)
     
 
 
@@ -39,7 +60,7 @@ const Navbar = () => {
         height={`75px`}
         display={`flex`}
         >
-            <Image src={logopngblack} />
+            <Image src={logopngblacknew} />
         </Col>
         <Col
         width={`50%`}
@@ -47,10 +68,11 @@ const Navbar = () => {
         display={`flex`}
         >
             <Items>
-                <Link style={{ textDecoration: 'none', color: '#1B1B1C' }}><Text>Link</Text></Link>
-                <Link style={{ textDecoration: 'none', color: '#1B1B1C' }}><Text>Link</Text></Link>
-                <Link style={{ textDecoration: 'none', color: '#1B1B1C' }}><Text>Link</Text></Link>
-                <Link style={{ textDecoration: 'none', color: '#1B1B1C' }}><Text>Link</Text></Link>
+                <StyledLink><Text>Our story</Text></StyledLink>
+                <StyledLink><Text>Membership</Text></StyledLink>
+                <StyledLink><Text>Write</Text></StyledLink>
+                <StyledLink><Text>Sign In</Text></StyledLink>
+                <StyledLink><Button>Get Started</Button></StyledLink>
             </Items>
         </Col>
         </Row>

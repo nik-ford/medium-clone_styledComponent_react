@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 export const AppContext = createContext({})
 
+// MOVE STYLED COMPONENT GRID TO styled component GlobalStyle
+
 export const AppProvider = ({ children }) => {
 
 const Div = styled.div`
