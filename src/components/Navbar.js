@@ -76,10 +76,10 @@ const Navbar = () => {
         collapse={'xs'}
         >
             <Items>
-                <StyledLink><Text>Our story</Text></StyledLink>
-                <StyledLink><Text>Membership</Text></StyledLink>
-                <StyledLink><Text>Write</Text></StyledLink>
-                <StyledLink><Text>Sign In</Text></StyledLink>
+                <StyledLink to={'/'}><Text>Our story</Text></StyledLink>
+                <StyledLink to={'/'}><Text>Membership</Text></StyledLink>
+                <StyledLink to={'/'}><Text>Write</Text></StyledLink>
+                <StyledLink to={'/'}><Text>Sign In</Text></StyledLink>
 
             </Items>
         </Col>

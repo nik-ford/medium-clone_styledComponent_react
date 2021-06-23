@@ -3,6 +3,7 @@ import styled from 'styled-components';
 // import useWindowDimensions from '../hooks/useWindowDimension'
 import Navbar from '../components/Navbar'
 import {AppContext} from '../context/AppProvider'
+import HeroHeader from '../components/HeroHeader'
 
 // TODO move styled component variables in a personal context
 // I will leverage styled components to dinamically render mobile/desktop styled component
@@ -32,7 +33,7 @@ const Home = () => {
 				size={1}
 				height={`400px`}
 				backgroundColor={`#C4E2FF`}>
-					hero header
+					<HeroHeader />
 				</Col>
 			</Row>
 			<Row>

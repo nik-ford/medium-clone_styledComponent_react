@@ -43,6 +43,8 @@ padding: ${(props) => props.padding};
 flex: ${(props) => props.size};
 width: ${(props) => props.width};
 height: ${(props) => props.height};
+justify-content: ${(props) => props.justifyContent};
+align-items: ${(props) => props.alignItems};
 ${(props) => props.collapse && media[props.collapse] (`
 display: none;
 `)};
