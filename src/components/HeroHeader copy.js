@@ -34,7 +34,6 @@ const Button = styled.button`
   border: 1px solid black;
   font-family: LoraVariable;
   margin-bottom: 10px;
-  margin-right: 52%;
 `;
 
 export const Apo = styled.img`
@@ -68,7 +67,8 @@ function HeroHeader() {
             height={`400px`}
             maxWidth={`600px`}
             justifyContent={`flex-end`}
-            alignItems={`flex-end`}
+            alignItems={`flex-start`}
+            marginLeft={`150px`}
 
             >
                      <Title>Medium is a place to write, read, and connect </Title>

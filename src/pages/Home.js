@@ -24,6 +24,7 @@ const Home = () => {
 				<Col
 				 size={1}
 				 height={`75px`}
+				 justifyContent={`center`}
 				 backgroundColor={`#C4E2FF`}>
 					 <Navbar />
 				</Col>
@@ -32,6 +33,7 @@ const Home = () => {
 				<Col
 				size={1}
 				height={`400px`}
+				justifyContent={`center`}
 				backgroundColor={`#C4E2FF`}>
 					<HeroHeader />
 				</Col>
