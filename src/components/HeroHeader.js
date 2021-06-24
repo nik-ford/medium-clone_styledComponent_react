@@ -34,7 +34,7 @@ const Button = styled.button`
   border: 1px solid black;
   font-family: LoraVariable;
   margin-bottom: 10px;
-  margin-right: 52%;
+  margin-right: 52.5%;
 `;
 
 export const Apo = styled.img`
@@ -44,6 +44,7 @@ export const Apo = styled.img`
 const Title = styled.h1`
 width: 70%;
 font-size: 56px;
+letter-spacing:-0.5px;
 color: black;
 font-family: LoraVariable;
 `;
@@ -65,7 +66,7 @@ function HeroHeader() {
             flexDirection={`column`}
             size={1}
             width={`50%`}
-            height={`400px`}
+            max-height={`600px`}
             maxWidth={`600px`}
             justifyContent={`flex-end`}
             alignItems={`flex-end`}
@@ -83,7 +84,7 @@ function HeroHeader() {
             width={`50%`}
             height={`400px`}
             justifyContent={`flex-end`}
-            alignItems={`flex-end`}
+            alignItems={`center`}
             collapse={`xs`}
             >
                      <Apo src={bothapo} />           
