@@ -71,7 +71,7 @@ function HeroHeader() {
             alignItems={`flex-end`}
 
             >
-                     <Title>Medium is a place to write, read, and connect </Title>
+                     <Title>Mediem is a place to write, read, and connect </Title>
                      <SubTitle>It's easy and free to post your thinking on a topic and connect with</SubTitle>
                      <Button>Get Started</Button>
             </Col>
