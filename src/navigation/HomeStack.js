@@ -5,11 +5,6 @@ import Home from '../pages/Home'
 
 const HomeStack = () => {
 
-    
-
-    useEffect(() => {
-      }, []);
-
     return (
         <Router>
             <Switch>

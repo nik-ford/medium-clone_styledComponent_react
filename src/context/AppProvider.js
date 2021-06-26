@@ -1,11 +1,20 @@
 import React, { createContext } from 'react';
 import styled from 'styled-components';
+import useDimensions from '../hooks/useDimensions'
 
 export const AppContext = createContext({})
 
 // MOVE STYLED COMPONENT GRID TO styled component GlobalStyle
 
 export const AppProvider = ({ children }) => {
+const {width, height} = useDimensions()
+
+const MainAppWrapper = styled.main`
+box-shadow: border-box;
+width: ${width};
+height: auto;
+
+`;
 
 
 const Div = styled.div`
@@ -51,7 +60,7 @@ flex-shrink: ${(props) => props.flexShrink};
 `;
 const media = {
 	xs: (styles) => `
-	@media only screen and (max-width: 580px) {
+	@media only screen and (max-width: 620px) {
 		${styles}
 	}
 	`,
