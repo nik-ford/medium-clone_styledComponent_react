@@ -11,7 +11,6 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'LoraVariable';
     src: url(${LoraVariable}) format('truetype');
     src: url(${PlayfairDisplay}) format('truetype');
-    font-weight: 300;
     font-style: normal;
     font-display: auto;
   }

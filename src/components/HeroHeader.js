@@ -1,8 +1,10 @@
-import React, {useContext} from 'react'
+import React, {useContext, useState} from 'react'
 import styled from 'styled-components'
 import {AppContext} from '../context/AppProvider'
 import { Link } from 'react-router-dom';
 import bothapo from '../assets/images/bothapo.svg'
+import useDimensions from '../hooks/useDimensions'
+
 
 const StyledLink = styled(Link)`
     text-decoration: none;
@@ -16,12 +18,11 @@ const StyledLink = styled(Link)`
 
 export const Wrapper = styled.div`
 display: flex;
-flex-direction:column;
 flex-wrap: nowrap;
-width: 50%;
-height: 400px;
-justify-content: space-between;
-align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-around;
 `;
 const Button = styled.button`
   color: black;
@@ -33,65 +34,71 @@ const Button = styled.button`
   border-radius: 50px;
   border: 1px solid black;
   font-family: LoraVariable;
-  margin-bottom: 10px;
-  margin-right: 52.5%;
 `;
 
 export const Apo = styled.img`
-  max-width:100%;
-  height: 80%;
+  width:500px;
+  height: 300px;
+
 `;
 const Title = styled.h1`
-width: 70%;
-font-size: 56px;
-letter-spacing:-0.5px;
+font-size: clamp(36px, 4vw, 56px );
+letter-spacing:-2px;
 color: black;
 font-family: LoraVariable;
 `;
 const SubTitle = styled.p`
-width: 70%;
-font-size:22px;
+font-size: clamp(16px, 3vw, 24px );
+font-size: 1.2rem;
 color: #292929;
 font-family: LoraVariable;
-margin-top: -30px;
 
 `;
 
 function HeroHeader() {
+    const { width, height } = useDimensions()
     const { Col, Row, Grid } = useContext(AppContext)
+
     return (
-            <Row>
+        <>
             <Col
+            marginTop={`2em`}
+            position={`fixed`}
+            maxHeight={`500px`}
             display={`flex`}
-            flexDirection={`column`}
-            size={1}
-            width={`50%`}
-            max-height={`600px`}
-            maxWidth={`600px`}
-            justifyContent={`flex-end`}
-            alignItems={`flex-end`}
-
-            >
-                     <Title>Mediem is a place to write, read, and connect </Title>
-                     <SubTitle>It's easy and free to post your thinking on a topic and connect with</SubTitle>
-                     <Button>Get Started</Button>
-            </Col>
-            <Col 
-            display={`flex`}
-            flexDirection={`column`}
+            flexDirection={`row`}
             flexWrap={`nowrap`}
-            size={1}
-            width={`50%`}
-            height={`400px`}
-            justifyContent={`flex-end`}
+            justifyContent={`space-around`}
             alignItems={`center`}
-            collapse={`xs`}
+            alignContent={`space-between`}
             >
-                     <Apo src={bothapo} />           
-            </Col>
+                <Col
+                size={`1`}
+                display={`flex`}
+                flex-wrap={`nowrap`}
+                flexDirection={`column`}
+                justifyContent={`center`}
+                alignItems={`flex-start`}>
+                    <Title>Mediem is a place to write, read, and connect </Title>
+                    <SubTitle>width:{width} height:{height}</SubTitle>
+                    <Button>Get Started</Button>
+                </Col>
+                <Col
+                size={1}
+                display={`flex`}
+                flex-wrap={`nowrap`}
+                flexDirection={`column`}
+                justifyContent={`flex-end`}
+                alignItems={`flex-end`}
+                alignContent={`flex-start`}
+                    marginTop={`7em`}
+                    collapse={`xs`}>
 
-        </Row>
-        
+                    <Apo src={bothapo} />   
+                </Col>
+             
+            </Col> 
+        </>
     )
 }
 
