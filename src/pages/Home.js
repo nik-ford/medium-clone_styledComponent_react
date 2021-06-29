@@ -2,9 +2,6 @@ import React, {useContext} from 'react';
 // import styled from 'styled-components';
 // import useWindowDimensions from '../hooks/useWindowDimension'
 import Navbar from '../components/Navbar'
-import NavbarDummy from '../components/NavbarDummy'
-import NavbarMobile from '../components/NavbarMobile'
-import NavbarTablet from '../components/NavbarTablet'
 import {AppContext} from '../context/AppProvider'
 import HeroHeader from '../components/HeroHeader'
 import useDimensions from '../hooks/useDimensions'
@@ -16,27 +13,29 @@ const Home = () => {
 	const breakpoint = 550
 
   return (
-		<Grid>
+		<Grid
+		>
 			<Row
 			borderBottom={`1px solid black`}
 			width={`100%`}
 			display={`flex`}
-			justifyContent={`space-around`}
+			justifyContent={`center`}
 			height={`75px`}
 			backgroundColor={`#C4E2FF`}
 			position={`fixed`}
-			> <NavbarDummy />
+			> <Navbar />
 				{/* {
 					width < breakpoint ? <NavbarTablet /> : <NavbarDummy />
 				} */}
 			</Row>
 			<Row
 			borderBottom={`1px solid black`}
-			width={`100vw`}
+			width={`100%`}
 			display={`flex`}
-			height={`450px`}
+			maxHeight={`550px`}
 			backgroundColor={`#C4E2FF`}
 			alignItems={`center`}
+			justifyContent={`center`}
 			>
 				<HeroHeader />
 			</Row>

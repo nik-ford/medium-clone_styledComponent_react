@@ -23,9 +23,20 @@ height: ${(props) => props.height};
 `;
 
 export const Grid = styled.div`
-box-shadow: border-box;
-width: 100vw;
 margin: -8px;
+box-shadow: border-box;
+display: ${(props) => props.display};
+width: ${(props) => props.width};
+align-items: ${(props) => props.alignItems};
+align-content: ${(props) => props.alignContent};
+justify-content: ${(props) => props.justifyContent};
+justify-items: ${(props) => props.justifyItems};
+justify-self: ${(props) => props.justifySelf};
+align-self: ${(props) => props.alignSelf};
+grid-template-columns:${(props) => props.gridTemplateColumns};
+grid-template-rows: ${(props) => props.gridTemplateRows};
+grid-template-areas: ${(props) => props.gridTemplateAreas};
+grid-area: ${(props) => props.gridArea};
 
 `;
 export const Row = styled.div`

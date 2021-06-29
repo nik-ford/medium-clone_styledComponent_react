@@ -3,36 +3,24 @@ import styled from 'styled-components'
 import {AppContext} from '../context/AppProvider'
 import logopngblacknew from '../assets/images/logopngblacknew.png'
 import { Link } from 'react-router-dom';
+import useDimensions from '../hooks/useDimensions'
 
-// TODO FIX COL
-
-export const Wrapper = styled.div`
-margin-right: 1em;
-  width: 100%;
-  height:75;
-  display: flex;
-justify-content: flex-end;
-align-items: center;
-`;
 export const Image = styled.img`
   width: 160px;
   height:30px;
 `;
-export const Items = styled.div`
-display: flex;
-width: 100%;
-height: 75px;
-justify-content: flex-end;
-align-items: center;
-`;
-export const Text = styled.p`
-margin-right: 10px;
-text-align: center;
-color: #191919;
-padding: 0.4em;
-font-family: PlayfairDisplay;
-font-size: 1em;
+const StyledLink = styled(Link)`
+    text-decoration: none;
+    display: flex;
+    text-align: center;
+    color: #191919;
+    padding: 0.5em;
+    font-family: PlayfairDisplay;
+    font-size: 1em;
 
+    &:focus, &:hover, &:visited, &:link, &:active {
+        text-decoration: none;
+    }
 `;
 const Button = styled.button`
   color: gainsboro;
@@ -44,59 +32,63 @@ const Button = styled.button`
   border-radius: 50px;
   border: 1px solid black;
   align-self: center;
-  margin-left: 0.8em;
-`;
-const StyledLink = styled(Link)`
-    text-decoration: none;
-    display: flex;
-
-    &:focus, &:hover, &:visited, &:link, &:active {
-        text-decoration: none;
-    }
 `;
 
-const Navbar = () => {
+
+
+const  NavbarDummy = () => {
     const { Col, Row } = useContext(AppContext)
-    
-
+    const {width} = useDimensions()
+    const breakpoint = 550
 
     return (
-    <>
+        <>
         <Row
-        display={`flex`}
-        width={`80%`}>
-        <Col
-        size={1}
-        height={`75px`}
-        display={`flex`}
-        >
-            <Wrapper><Image src={logopngblacknew} /></Wrapper>
-            
-        </Col>
-        <Col
-        size={3}
-        height={`75px`}
-        display={`flex`}
-        >
-            <Items>
-                <StyledLink to={'/'}><Text>Our story</Text></StyledLink>
-                <StyledLink to={'/'}><Text>Membership</Text></StyledLink>
-                <StyledLink to={'/'}><Text>Write</Text></StyledLink>
-                <StyledLink to={'/'}><Text>Sign In</Text></StyledLink>
+            display={`flex`}
+            width={ width < breakpoint ? `100%` : `85%` }
+            >
 
-            </Items>
-        </Col>
-        <Col
+          <Col
         size={1}
         height={`75px`}
         display={`flex`}
-        justifyItems={`flex-end`}
+        justifyContent={`flex-start`}
+        alignItems={`center`}
+        > <Image src={logopngblacknew} />
+            
+            </Col> 
+          <Col
+        size={4.5}
+        height={`75px`}
+        display={`flex`}
+        justifyContent={`flex-end`}
+        alignItems={`center`}
+        collapse={`xs`}
         >
-            <StyledLink><Button>Get Started</Button></StyledLink>
-        </Col>
-        </Row>
-    </>
+            <StyledLink to={'/'}>Our story</StyledLink>
+            <StyledLink to={'/'}>Membership</StyledLink>
+            <StyledLink to={'/'}>Write</StyledLink>
+            </Col> 
+          <Col
+        size={0.6}
+        height={`75px`}
+        display={`flex`}
+        justifyContent={`center`}
+        alignItems={`center`}
+        collapse={`xs`}
+        >
+            <StyledLink to={'/'}>Sign In</StyledLink>
+        </Col> 
+          <Col
+        size={0.5}
+        height={`75px`}
+        display={`flex`}
+        justifyContent={width < breakpoint ? `flex-end` :  `center`}
+        alignItems={`center`}
+        ><StyledLink><Button>Get Started</Button></StyledLink></Col> 
+        </Row> 
+        </>
     )
 }
 
-export default Navbar
+export default NavbarDummy

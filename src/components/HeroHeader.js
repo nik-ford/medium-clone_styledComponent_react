@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import bothapo from '../assets/images/bothapo.svg'
 import useDimensions from '../hooks/useDimensions'
 
-
+// TODO try building 3 rows inside of the column give row direction and place elements into every row
 const StyledLink = styled(Link)`
     text-decoration: none;
     display: flex;
@@ -34,32 +34,34 @@ const Button = styled.button`
   border-radius: 50px;
   border: 1px solid black;
   font-family: LoraVariable;
+  z-index: 3;
 `;
 
 export const Apo = styled.img`
   width:500px;
-  height: 300px;
+  height: 400px;
 
 `;
 const Title = styled.h1`
-font-size: clamp(36px, 4vw, 56px );
+font-size: clamp(50px, 4vw, 59px );
 letter-spacing:-2px;
 color: black;
 font-family: LoraVariable;
 `;
 const SubTitle = styled.p`
-font-size: clamp(16px, 3vw, 24px );
-font-size: 1.2rem;
+font-size: clamp(16px, 1vw, 24px );
 color: #292929;
 font-family: LoraVariable;
+margin-bottom: 50px;
 
 `;
 
 
 const HeroHeader = () => {
-    const { Col } = useContext(AppContext)
+    const { Col, Row } = useContext(AppContext)
     const { width, height, size } = useDimensions()
-
+    const breakpoint = 550
+// TODO move ternary expression to context, name it mobile?? 
 
     useLayoutEffect(() => {
 
@@ -71,28 +73,22 @@ const HeroHeader = () => {
 
     return (
         <>
-            <Col
-            marginTop={`2em`}
-            position={`fixed`}
-            maxHeight={`500px`}
+            <Row
             display={`flex`}
-            flexDirection={`row`}
-            flexWrap={`nowrap`}
-            justifyContent={`space-around`}
-            alignItems={`center`}
-            alignContent={`space-between`}
-            >
+            height={`100%`}
+            width={width < breakpoint ? `100%` : `85%`}>
                 <Col
-                size={`1`}
+                size={0.8}
                 display={`flex`}
                 flex-wrap={`nowrap`}
                 flexDirection={`column`}
-                justifyContent={`center`}
-                alignItems={`flex-start`}>
+                justifyItems={`center`}
+                alignItems={`flex-start`}
+                margin={`60px 20px 15px 0px`}>
                     <Title>Mediem is a place to write, read, and connect </Title>
-                    <SubTitle>width:{width} height:{height}</SubTitle>
-                    <SubTitle>breakpoint: {size}</SubTitle>
+                    <SubTitle>It's easy and free to post your thinking on any topic and connect with millions of readers.</SubTitle>
                     <Button onClick={() => console.log(size)}>Get Started</Button>
+
                 </Col>
                 <Col
                 size={1}
@@ -101,14 +97,12 @@ const HeroHeader = () => {
                 flexDirection={`column`}
                 justifyContent={`flex-end`}
                 alignItems={`flex-end`}
-                alignContent={`flex-start`}
-                    marginTop={`7em`}
+                alignContent={`flex-end`}
                     collapse={`xs`}>
 
                     <Apo src={bothapo} />   
                 </Col>
-             
-            </Col> 
+            </Row>
         </>
     )
 }
