@@ -32,7 +32,7 @@ export const Row = styled.div`
 width: ${(props) => props.width};
 position: ${(props) => props.position};
 display: ${(props) => props.display};
-border-bottom: 1px solid black;
+border-bottom: ${(props) => props.borderBottom};
 margin: ${(props) => props.margin};
 margin-top: ${(props) => props.marginTop};
 margin-left: ${(props) => props.marginLeft};

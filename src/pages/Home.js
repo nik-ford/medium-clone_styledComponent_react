@@ -18,6 +18,7 @@ const Home = () => {
   return (
 		<Grid>
 			<Row
+			borderBottom={`1px solid black`}
 			width={`100%`}
 			display={`flex`}
 			justifyContent={`space-around`}
@@ -30,6 +31,7 @@ const Home = () => {
 				} */}
 			</Row>
 			<Row
+			borderBottom={`1px solid black`}
 			width={`100vw`}
 			display={`flex`}
 			height={`450px`}
@@ -39,6 +41,7 @@ const Home = () => {
 				<HeroHeader />
 			</Row>
 			<Row
+			borderBottom={`1px solid black`}
 			width={`100vw`}
 			display={`flex`}
 			height={`400px`}
