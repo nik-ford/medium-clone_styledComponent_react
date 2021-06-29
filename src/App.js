@@ -15,9 +15,10 @@ const GlobalStyle = createGlobalStyle`
     font-display: auto;
   }
 `;
-
+// TODO style index as a styled component function see appcontext
 
 function App() {
+
 
   return (
     <AppProvider>

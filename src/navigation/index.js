@@ -1,13 +1,11 @@
 import React from 'react'
-import { AppProvider } from '../context/AppProvider'
 import HomeStack from './HomeStack'
 
 
- const index = () => {
+ const Index = () => {
+
     return (
-        <AppProvider>
             <HomeStack />
-        </AppProvider>
     )
 }
-export default index
+export default Index

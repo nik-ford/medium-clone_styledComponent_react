@@ -1,23 +1,17 @@
-import React, { createContext } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import styled from 'styled-components';
 import useDimensions from '../hooks/useDimensions'
 
 export const AppContext = createContext({})
 
 // MOVE STYLED COMPONENT GRID TO styled component GlobalStyle
-
-export const AppProvider = ({ children }) => {
-const {width, height} = useDimensions()
-
-const MainAppWrapper = styled.main`
+export const MainAppWrapper = styled.main`
 box-shadow: border-box;
-width: ${width};
 height: auto;
-
 `;
 
 
-const Div = styled.div`
+export const Div = styled.div`
 background-color: ${(props) => props.backgroundColor};
 display: ${(props) => props.display};
 color: ${(props) => props.color};
@@ -28,16 +22,22 @@ height: ${(props) => props.height};
 
 `;
 
-const Grid = styled.div`
-margin: -9px;
+export const Grid = styled.div`
+box-shadow: border-box;
+width: 100vw;
+margin: -8px;
 
 `;
-const Row = styled.div`
+export const Row = styled.div`
 width: ${(props) => props.width};
 position: ${(props) => props.position};
 display: ${(props) => props.display};
 border-bottom: 1px solid black;
-margin: 0px;
+margin: ${(props) => props.margin};
+margin-top: ${(props) => props.marginTop};
+margin-left: ${(props) => props.marginLeft};
+margin-right: ${(props) => props.marginRight};
+margin-bottom: ${(props) => props.marginBottom};
 padding: ${(props) => props.padding};
 width: ${(props) => props.width};
 max-width: ${(props) => props.maxWidth};
@@ -57,8 +57,9 @@ justify-items: ${(props) => props.justifyItems};
 justify-self: ${(props) => props.justifySelf};
 align-self: ${(props) => props.alignSelf};
 flex-shrink: ${(props) => props.flexShrink};
+flex-direction: ${(props) => props.flexDirection};
 `;
-const media = {
+export const media = {
 	xs: (styles) => `
 	@media only screen and (max-width: 620px) {
 		${styles}
@@ -66,7 +67,7 @@ const media = {
 	`,
 }
 
-const Col = styled.div`
+export const Col = styled.div`
 z-index:${(props) => props.zIndex};
 grid-template-columns:${(props) => props.gridTemplateColumns};
 position: ${(props) => props.position};
@@ -98,6 +99,11 @@ ${(props) => props.collapse && media[props.collapse] (`
 display: none;
 `)};
 `;
+
+
+export const AppProvider = ({ children }) => {
+
+
 // RESPONSIVE DESIGN PASSED AS PROPS USING STRING INTERPOLATION
 // PASS other media queries add other properties to COL and media queries
 
@@ -107,7 +113,7 @@ display: none;
             Grid,
             Row,
             Col,
-            Div
+            Div,
         }}
         >{children}
         </AppContext.Provider>

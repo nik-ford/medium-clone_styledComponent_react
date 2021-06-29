@@ -2,22 +2,32 @@ import React, {useContext} from 'react';
 // import styled from 'styled-components';
 // import useWindowDimensions from '../hooks/useWindowDimension'
 import Navbar from '../components/Navbar'
+import NavbarDummy from '../components/NavbarDummy'
+import NavbarMobile from '../components/NavbarMobile'
+import NavbarTablet from '../components/NavbarTablet'
 import {AppContext} from '../context/AppProvider'
 import HeroHeader from '../components/HeroHeader'
+import useDimensions from '../hooks/useDimensions'
+
 
 const Home = () => {
-	const {Grid, Row, Col, Div } = useContext(AppContext)
+	const {Grid, Row, Div } = useContext(AppContext)
+	const { width, height } = useDimensions()
+	const breakpoint = 550
 
   return (
 		<Grid>
 			<Row
-			width={`100vw`}
+			width={`100%`}
 			display={`flex`}
+			justifyContent={`space-around`}
 			height={`75px`}
 			backgroundColor={`#C4E2FF`}
 			position={`fixed`}
-			>
-				<Navbar />
+			> <NavbarDummy />
+				{/* {
+					width < breakpoint ? <NavbarTablet /> : <NavbarDummy />
+				} */}
 			</Row>
 			<Row
 			width={`100vw`}

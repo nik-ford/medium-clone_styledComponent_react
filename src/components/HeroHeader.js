@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react'
+import React, {useContext, useState, useLayoutEffect} from 'react'
 import styled from 'styled-components'
 import {AppContext} from '../context/AppProvider'
 import { Link } from 'react-router-dom';
@@ -55,9 +55,19 @@ font-family: LoraVariable;
 
 `;
 
-function HeroHeader() {
-    const { width, height } = useDimensions()
-    const { Col, Row, Grid } = useContext(AppContext)
+
+const HeroHeader = () => {
+    const { Col } = useContext(AppContext)
+    const { width, height, size } = useDimensions()
+
+
+    useLayoutEffect(() => {
+
+        return () =>  {}
+        ;
+    }, [])
+
+
 
     return (
         <>
@@ -81,7 +91,8 @@ function HeroHeader() {
                 alignItems={`flex-start`}>
                     <Title>Mediem is a place to write, read, and connect </Title>
                     <SubTitle>width:{width} height:{height}</SubTitle>
-                    <Button>Get Started</Button>
+                    <SubTitle>breakpoint: {size}</SubTitle>
+                    <Button onClick={() => console.log(size)}>Get Started</Button>
                 </Col>
                 <Col
                 size={1}

@@ -62,8 +62,11 @@ const Navbar = () => {
 
     return (
     <>
+        <Row
+        display={`flex`}
+        width={`80%`}>
         <Col
-        width={`25%`}
+        size={1}
         height={`75px`}
         display={`flex`}
         >
@@ -71,10 +74,9 @@ const Navbar = () => {
             
         </Col>
         <Col
-        width={`60%`}
+        size={3}
         height={`75px`}
         display={`flex`}
-        collapse={'xs'}
         >
             <Items>
                 <StyledLink to={'/'}><Text>Our story</Text></StyledLink>
@@ -85,13 +87,14 @@ const Navbar = () => {
             </Items>
         </Col>
         <Col
-        width={`20%`}
+        size={1}
         height={`75px`}
         display={`flex`}
         justifyItems={`flex-end`}
         >
             <StyledLink><Button>Get Started</Button></StyledLink>
         </Col>
+        </Row>
     </>
     )
 }

@@ -4,17 +4,23 @@ import {AppContext} from '../context/AppProvider'
 import logopngblacknew from '../assets/images/logopngblacknew.png'
 import { Link } from 'react-router-dom';
 
-// TODO FIX COL
-
 export const Image = styled.img`
   width: 150px;
   height:25px;
+`;
+export const Text = styled.p`
+color: #191919;
+margin-right: 1em;
+padding: 0.4em;
+font-family: PlayfairDisplay;
+font-size: 1em;
+
 `;
 
 const Button = styled.button`
   color: gainsboro;
   width: 8em;
-  height: 2.8em;
+  height: 2.5em;
   font-size: 0.85em;
   padding: 0.25em 1em;
   background-color: black;
@@ -41,21 +47,30 @@ const Navbar = () => {
         <Row
         display={`flex`}
         flexDirection={`row`}
-        alignContent={`center`}
-        alignItems={`center`}
         height={`75px`}
         width={`100vw`}>
         <Col
-        width={`100%`}
         size={1}
+        alignItems={`center`}
+        justifyContent={`flex-start`}
         display={`flex`}
-        justifyContent={`space-between`}
         marginRight={`1em`}
         marginLeft={`1em`}
         >
-            <Image src={logopngblacknew} />
             
-            <StyledLink><Button>Get Started</Button></StyledLink>
+            <Image src={logopngblacknew} />
+
+            <Col
+        size={1}
+        display={`flex`}
+        justifyContent={`flex-end`}
+        alignItems={`center`}
+        marginRight={`1em`}
+        marginLeft={`1em`}
+        >
+            <StyledLink to={'/'}><Text>Sign In</Text></StyledLink>
+            <StyledLink to={'/'}><Button>Get Started</Button></StyledLink>
+            </Col>
         </Col>
         </Row>
         

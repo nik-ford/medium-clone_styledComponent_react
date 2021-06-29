@@ -1,18 +1,26 @@
-import { useState, useEffect } from 'react'
+import { useState, useLayoutEffect } from 'react';
 
 const useDimensions = () => {
     const [width, setWidth] = useState(window.innerWidth)
     const [height, setHeight] = useState(window.innerHeight)
+    const [size, setSize] = useState()
+    const breakpoint = 550
 
-    useEffect(() => {
+
+    useLayoutEffect(() => {
         const handleResize = () => 
         setWidth(window.innerWidth)
         setHeight(window.innerHeight)
-        window.addEventListener("resize", handleResize)
-        return () => window.removeEventListener("resize", handleResize)
+          const size = 
+          width < breakpoint ? "mobile" : "desktop"
+          setSize(size)
+        
+
+        window.addEventListener("resize", handleResize);
+        return () => window.removeEventListener('resize', handleResize);
       }, []);
     
-      return { width, height }
+      return { width, height, size };
     }
-export default useDimensions
-    
+
+  export default useDimensions
