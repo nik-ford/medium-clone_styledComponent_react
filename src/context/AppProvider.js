@@ -4,7 +4,7 @@ import useDimensions from '../hooks/useDimensions'
 
 export const AppContext = createContext({})
 
-// MOVE STYLED COMPONENT GRID TO styled component GlobalStyle
+// TODO MOVE STYLED COMPONENT GRID TO styled component GlobalStyle
 export const MainAppWrapper = styled.main`
 box-shadow: border-box;
 height: auto;
@@ -19,6 +19,7 @@ padding: ${(props) => props.padding};
 flex: ${(props) => props.size};
 width: ${(props) => props.width};
 height: ${(props) => props.height};
+text-align: ${(props) => props.textAlign};
 
 `;
 
@@ -40,6 +41,8 @@ grid-area: ${(props) => props.gridArea};
 
 `;
 export const Row = styled.div`
+max-content: ${(props) => props.maxContent};
+min-content: ${(props) => props.minContent};
 width: ${(props) => props.width};
 position: ${(props) => props.position};
 display: ${(props) => props.display};
@@ -79,6 +82,8 @@ export const media = {
 }
 
 export const Col = styled.div`
+max-content: ${(props) => props.maxContent};
+min-content: ${(props) => props.minContent};
 z-index:${(props) => props.zIndex};
 grid-template-columns:${(props) => props.gridTemplateColumns};
 position: ${(props) => props.position};
